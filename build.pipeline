@@ -1,16 +1,10 @@
 pipeline{
-    agent {
-        node{
-            label 'linux'
-        }
-    }
+    agent any
 
     stages{
         stage('build test'){
             steps{
-                script{
-                sh "hello world"
-                }
+                bat 'this is windows'
 
             }
         }
