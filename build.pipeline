@@ -1,5 +1,9 @@
 pipeline{
-    agent {linux}
+     agent {
+        node {
+            label 'windows'
+        }
+    }
 
     stages{
         stage('build test'){
