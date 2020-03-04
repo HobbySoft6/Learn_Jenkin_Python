@@ -8,10 +8,10 @@ pipeline{
                 script{
                     bat 'dir'
                     println "this is a test for groovy"
-                    def sum(a, b){
-                        println a+b
+                    def mysum(int a, int b){
+                        println(a+b)
                     }
-                    sum(12, 13)
+                    mysum(12, 13)
 
                 }
 
