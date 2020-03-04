@@ -4,7 +4,10 @@ pipeline{
     stages{
         stage('deploy test'){
             steps{
-                sh 'echo "hello world, deploy"'
+                script{
+                    bat 'echo "hi, try bat and echo"'
+                    echo "hi, this is deploy"
+                }
 
             }
         }
