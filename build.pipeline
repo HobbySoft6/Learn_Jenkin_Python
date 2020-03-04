@@ -4,8 +4,9 @@ pipeline{
     stages{
         stage('build test'){
             steps{
-                bat 'dir'
+            
                 script{
+                    bat 'dir'
                     println "this is a test for groovy"
                 }
 
