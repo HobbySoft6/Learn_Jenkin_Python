@@ -5,6 +5,10 @@ pipeline{
         stage('build test'){
             steps{
                 bat 'dir'
+                script{
+                    println "this is a test for groovy"
+                }
+
 
             }
         }
