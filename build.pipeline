@@ -3,20 +3,13 @@ pipeline{
 
     stages{
         stage('build test'){
-            steps{
-            
+            steps{            
                 script{
                     bat 'dir'
-                    println "this is a test for groovy"
-                    
+                    println "this is a test for groovy"                    
                     mysum(12, 13)
-                    int a=5
-                    if(a<3){
-                        println('less')
-                    }
-                    else{
-                        println('greater')
-                    }
+                    echo "${WORKSPACE}"
+                                        
 
                 }
 
