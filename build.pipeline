@@ -1,6 +1,8 @@
+@Library('myShareLibrary@master') _
+
 pipeline{
      agent any
-     
+
     stages{
         stage('build test'){
             steps{            
@@ -9,6 +11,13 @@ pipeline{
                     println "this is a test for groovy"                    
                     mysum(12, 13)
                     echo "${WORKSPACE}"              
+                }
+            }
+        }
+        stage('test shared library'){
+            steps{            
+                script{
+                    demo()                                  
                 }
             }
         }
