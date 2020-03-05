@@ -1,6 +1,6 @@
 pipeline{
      agent any
-
+     
     stages{
         stage('build test'){
             steps{            
@@ -8,18 +8,12 @@ pipeline{
                     bat 'dir'
                     println "this is a test for groovy"                    
                     mysum(12, 13)
-                    echo "${WORKSPACE}"
-                                        
-
+                    echo "${WORKSPACE}"              
                 }
-
-
             }
         }
     }
 
-
-    
 }
 def mysum(int a, int b){
                         println(a+b)
