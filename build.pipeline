@@ -39,10 +39,13 @@ pipeline{
 
                 echo "Toggle: ${params.TOGGLE}"
 
-                echo "Choice: ${params.CHOICE}"
+                echo "Choice: ${params.CHOICE}"                
 
                 echo "Password: ${params.PASSWORD}"
                 echo "my job name: ${env.JOB_NAME}"
+                script{
+                    println 'it is under script, the name is: params.PERSON'
+                }
             }
         }
         
