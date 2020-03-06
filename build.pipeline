@@ -52,9 +52,9 @@ pipeline{
     post {
         success {
             script {                
-                build job: JOB_NAME.replace('/Build/', '/Deploy/'),
+                build job: JOB_NAME.replace('/build/', '/Ddploy/'),
                     parameters: [
-                        string(name: 'PERSON', "an alter name"),
+                        string(name: 'PERSON', ${params.PERSON}),
 
                         booleanParam(name: 'TOGGLE', Value: true),                      
 
