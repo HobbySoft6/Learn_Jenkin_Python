@@ -44,7 +44,7 @@ pipeline{
                 echo "Password: ${params.PASSWORD}"
                 echo "my job name: ${env.JOB_NAME}"
                 script{
-                    println 'it is under script, the name is: params.PERSON'
+                    println 'it is under script, the name is:' + params.PERSON
                 }
             }
         }
