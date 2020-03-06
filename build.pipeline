@@ -42,10 +42,9 @@ pipeline{
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
+                echo "${env.JOB_NAME}"
             }
         }
-
-
         
 
     }
@@ -58,9 +57,9 @@ pipeline{
                     parameters: [
                         string(name: 'PERSON', value:a),
 
-                        booleanParam(name: 'TOGGLE', Value: true),                      
+                        booleanParam(name: 'TOGGLE', value: true),                      
 
-                        password(name: 'PASSWORD', Value: b)
+                        password(name: 'PASSWORD', value: b)
                         ],
                         wait: false
             }
