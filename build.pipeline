@@ -55,7 +55,7 @@ pipeline{
                 b='secret'             
                 build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/master',                
                     parameters: [
-                        string(name: 'PERSON', value:${params.PERSON}),
+                        string(name: 'PERSON', value:params.PERSON),
 
                         booleanParam(name: 'TOGGLE', value: true),                      
 
