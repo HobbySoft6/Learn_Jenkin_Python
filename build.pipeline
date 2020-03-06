@@ -61,7 +61,7 @@ pipeline{
 
                         password(name: 'PASSWORD', value: b)
                         ],
-                        echo "my new job name: ${env.JOB_NAME}"
+                        println "my new job name: ${env.JOB_NAME}"
                         wait: false
             }
         }
