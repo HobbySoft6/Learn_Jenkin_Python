@@ -54,7 +54,7 @@ pipeline{
             script {   
                 a= 'jason'
                 b='secret'             
-                build job: JOB_NAME.replace('/build/', '/Ddploy/'),
+                build job: JOB_NAME.replace('/build/', '/deploy/'),
                     parameters: [
                         string(name: 'PERSON', value:a),
 
