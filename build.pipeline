@@ -46,7 +46,10 @@ pipeline{
         }
 
 
-        post {
+        
+
+    }
+    post {
         success {
             script {                
                 build job: JOB_NAME.replace('/Build/', '/Deploy/'),
@@ -60,8 +63,6 @@ pipeline{
                         wait: false
             }
         }
-    }
-
     }
 
 }
