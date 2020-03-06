@@ -53,7 +53,7 @@ pipeline{
             script {   
                 a= 'jason'
                 b='secret'             
-                build job: JOB_NAME.replace('/build/', '/deploy/'),                
+                build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/master',                
                     parameters: [
                         string(name: 'PERSON', value:a),
 
@@ -61,7 +61,7 @@ pipeline{
 
                         password(name: 'PASSWORD', value: b)
                         ],
-                        println "my new job name: ${env.JOB_NAME}"
+                        
                         wait: false
             }
         }
