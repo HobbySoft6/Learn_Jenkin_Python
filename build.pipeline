@@ -49,6 +49,25 @@ pipeline{
             }
         }
 
+
+        post {
+        success {
+            script {                
+                build job: JOB_NAME.replace('/Build/', '/Deploy/'),
+                    parameters: [
+                        string(name: 'PERSON', "an alter name")
+
+                        text(name: 'BIOGRAPHY', Value: ${params.BIOGRAPHY})
+
+                        booleanParam(name: 'TOGGLE', Value: true)                        
+
+                        password(name: 'PASSWORD', Value: ${params.PASSWORD})
+                        ],
+                        wait: false
+            }
+        }
+    }
+
     }
 
 }
