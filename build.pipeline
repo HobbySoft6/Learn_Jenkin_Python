@@ -56,7 +56,7 @@ pipeline{
                 b='secret'             
                 build job: JOB_NAME.replace('/build/', '/Ddploy/'),
                     parameters: [
-                        string(name: 'PERSON', a),
+                        string(name: 'PERSON', value:a),
 
                         booleanParam(name: 'TOGGLE', Value: true),                      
 
