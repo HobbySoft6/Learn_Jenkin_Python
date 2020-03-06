@@ -30,7 +30,7 @@ pipeline{
                 echo "Choice: ${params.CHOICE}"
 
                 echo "Password: ${params.PASSWORD}"
-                echo "${env.JOB_NAME}"
+                echo "my job name: ${env.JOB_NAME}"
             }
         }
     }
