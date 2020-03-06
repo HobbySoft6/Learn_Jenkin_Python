@@ -53,9 +53,7 @@ pipeline{
     }
     post {
         success {
-            script {   
-                a= 'jason'
-                b='secret'             
+            script {                              
                 build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/master',                
                     parameters: [
                         string(name: 'PERSON', value:params.PERSON),
@@ -65,7 +63,7 @@ pipeline{
                         password(name: 'PASSWORD', value: b)
                         ],
                         
-                        wait: true
+                        wait: false
             }
         }
     }
