@@ -51,14 +51,16 @@ pipeline{
     }
     post {
         success {
-            script {                
+            script {   
+                a= 'jason'
+                b='secret'             
                 build job: JOB_NAME.replace('/build/', '/Ddploy/'),
                     parameters: [
-                        string(name: 'PERSON', ${params.PERSON}),
+                        string(name: 'PERSON', a),
 
                         booleanParam(name: 'TOGGLE', Value: true),                      
 
-                        password(name: 'PASSWORD', Value: ${params.PASSWORD})
+                        password(name: 'PASSWORD', Value: b)
                         ],
                         wait: false
             }
