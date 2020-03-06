@@ -51,9 +51,9 @@ pipeline{
             script {                
                 build job: JOB_NAME.replace('/Build/', '/Deploy/'),
                     parameters: [
-                        string(name: 'PERSON', "an alter name")
+                        string(name: 'PERSON', "an alter name"),
 
-                        booleanParam(name: 'TOGGLE', Value: true)                        
+                        booleanParam(name: 'TOGGLE', Value: true),                      
 
                         password(name: 'PASSWORD', Value: ${params.PASSWORD})
                         ],
