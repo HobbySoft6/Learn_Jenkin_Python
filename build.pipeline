@@ -53,8 +53,7 @@ pipeline{
             script {   
                 a= 'jason'
                 b='secret'             
-                build job: JOB_NAME.replace('/build/', '/deploy/'),
-                echo "my new job name: ${env.JOB_NAME}"
+                build job: JOB_NAME.replace('/build/', '/deploy/'),                
                     parameters: [
                         string(name: 'PERSON', value:a),
 
@@ -62,6 +61,7 @@ pipeline{
 
                         password(name: 'PASSWORD', value: b)
                         ],
+                        echo "my new job name: ${env.JOB_NAME}",
                         wait: false
             }
         }
