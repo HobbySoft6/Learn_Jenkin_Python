@@ -65,7 +65,7 @@ pipeline{
                         password(name: 'PASSWORD', value: b)
                         ],
                         
-                        wait: false
+                        wait: 15 seconds
             }
         }
     }
