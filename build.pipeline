@@ -54,6 +54,7 @@ pipeline{
                 a= 'jason'
                 b='secret'             
                 build job: JOB_NAME.replace('/build/', '/deploy/'),
+                echo "my new job name: ${env.JOB_NAME}"
                     parameters: [
                         string(name: 'PERSON', value:a),
 
