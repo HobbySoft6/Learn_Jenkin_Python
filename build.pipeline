@@ -15,6 +15,13 @@ pipeline{
     } 
 
     stages{
+
+        stage('env test'){
+            steps{            
+                sh 'printenv'
+            }
+        }
+
         stage('build test'){
             steps{            
                 script{
@@ -25,6 +32,7 @@ pipeline{
                 }
             }
         }
+
         stage('test shared library'){
             steps{            
                 script{
