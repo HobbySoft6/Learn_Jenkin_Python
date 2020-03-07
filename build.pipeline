@@ -18,8 +18,8 @@ pipeline{
 
         stage('env test'){
             steps{            
-                bat 'set myvar = PATH'
-                echo '${myvar}'
+                bat 'set'
+                
             }
         }
 
