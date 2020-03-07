@@ -69,7 +69,7 @@ pipeline{
 
                         booleanParam(name: 'TOGGLE', value: true),                      
 
-                        password(name: 'PASSWORD', value: b)
+                        password(name: 'PASSWORD', value: 'secret')
                         ],
                         
                         wait: false
