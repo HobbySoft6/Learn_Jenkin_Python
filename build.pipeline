@@ -17,9 +17,10 @@ pipeline{
     stages{
 
         stage('env test'){
-            steps{            
+            steps{
+                echo 'start env'            
                 bat 'set'
-                
+                echo 'end env'
             }
         }
 
