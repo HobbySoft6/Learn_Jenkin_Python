@@ -14,13 +14,18 @@ pipeline{
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     } 
 
+    environment{
+        def envOnBuild1 = "envOnBuildValue1"
+        def envOnBuild2 = "envOnBuildValue2"
+    }
+
     stages{
 
         stage('env test'){
-            steps{
-                echo 'start env'            
-                bat 'set'
-                echo 'end env'
+            steps{                            
+                bat 'set' 
+                bat 'echo "followings are my own define env"'
+                             
             }
         }
 
