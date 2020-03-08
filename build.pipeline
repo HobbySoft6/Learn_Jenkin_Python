@@ -29,10 +29,11 @@ pipeline{
                 bat 'set' 
                 bat 'echo "followings are my own define env"'
                 bat 'echo "my define variable one is ${env.envOnBuild2}"'
-                bat 'echo "my define variable one is ${env.testEnvVarName1}"'
 
             script{
                 echo "${env.envOnBuild1}"
+                echo "my define variable one is ${env.testEnvVarName1}"
+
             }    
                              
             }
