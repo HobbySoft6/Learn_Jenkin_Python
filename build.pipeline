@@ -14,9 +14,12 @@ pipeline{
         password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
     } 
 
-    environment{
+    
+    
+    environment {
         def envOnBuild1 = "envOnBuildValue1"
         def envOnBuild2 = "envOnBuildValue2"
+  
     }
 
     stages{
