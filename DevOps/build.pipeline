@@ -1,0 +1,99 @@
+@Library('myShareLibrary@master') _
+
+
+
+pipeline{
+    agent any
+    parameters {
+        string(name: 'PERSON', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+
+        booleanParam(name: 'TOGGLE', defaultValue: true, description: 'Toggle this value')
+
+        choice(name: 'CHOICE', choices: ['One', 'Two', 'Three'], description: 'Pick something')
+
+        password(name: 'PASSWORD', defaultValue: 'SECRET', description: 'Enter a password')
+    } 
+
+    
+    
+    environment {
+        def envOnBuild1 = "envOnBuildValue1"
+        def envOnBuild2 = "envOnBuildValue2"
+  
+    }
+
+    stages{
+
+        stage('env test'){
+            steps{                            
+                bat 'set' 
+                bat 'echo "followings are my own define env"'
+                bat 'echo "my define variable one is ${env.envOnBuild2}"'
+
+            script{
+                echo "${env.envOnBuild1}"
+                echo "my define variable one is ${env.testEnvVarName1}"
+
+            }    
+                             
+            }
+        }
+
+        stage('build test'){
+            steps{            
+                script{
+                    bat 'dir'
+                    println "this is a test for groovy"                    
+                    mysum(12, 13)
+                    echo "${WORKSPACE}"              
+                }
+            }
+        }
+
+        stage('test shared library'){
+            steps{            
+                script{
+                    demo()                                  
+                }
+            }
+        }
+
+        stage('test parameters'){
+            steps{            
+                echo "Hello ${params.PERSON}"
+
+                echo "Toggle: ${params.TOGGLE}"
+
+                echo "Choice: ${params.CHOICE}"                
+
+                echo "Password: ${params.PASSWORD}"
+                echo "my job name: ${env.JOB_NAME}"
+                script{
+                    println 'it is under script, the name is:' + params.PERSON
+                }
+            }
+        }
+        
+
+    }
+    post {
+        success {
+            script {                              
+                build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/master',                
+                    parameters: [
+                        string(name: 'PERSON', value:params.PERSON),
+
+                        booleanParam(name: 'TOGGLE', value: true),                      
+
+                        password(name: 'PASSWORD', value: 'secret')
+                        ],
+                        
+                        wait: false
+            }
+        }
+    }
+
+}
+def mysum(int a, int b){
+                        println(a+b)
+                    }
