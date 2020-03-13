@@ -13,7 +13,7 @@ import xml.etree.ElementTree as ET
 import json
 import os
 import sys
- #import pytest
+import pytest
 import subprocess
 #import coverage
 import site
