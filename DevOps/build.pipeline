@@ -49,7 +49,7 @@ pipeline{
                     echo "my current directory: ${WORKSPACE}"  
                     echo "use pwd to find current directory as following:"
                     sleep(5)
-                    pwd
+                    
                                
                 }
                 
