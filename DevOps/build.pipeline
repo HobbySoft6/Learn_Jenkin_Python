@@ -45,7 +45,9 @@ pipeline{
                     bat 'dir'
                     println "this is a test for groovy"                    
                     mysum(12, 13)
-                    echo "my current directory: ${WORKSPACE}"              
+                    echo "my current directory: ${WORKSPACE}"  
+                    echo "use pwd to find current directory as following:"
+                    pwd            
                 }
             }
         }
