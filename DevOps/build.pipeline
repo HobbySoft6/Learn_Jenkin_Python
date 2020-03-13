@@ -48,7 +48,9 @@ pipeline{
                     mysum(12, 13)
                     echo "my current directory: ${WORKSPACE}"  
                     echo "use pwd to find current directory as following:"
-                    sleep(105)
+                    sleep(2)
+                    def a=pwd()
+                    echo "${a}"
                     
                                
                 }
