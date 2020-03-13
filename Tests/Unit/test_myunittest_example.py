@@ -22,7 +22,7 @@ import re
 class TestExtractSkosExport(unittest.TestCase):
     def test_add(self):
         a=7+3
-        self.assertEqual(a, 7) 
+        self.assertEqual(a, 10) 
 
     def test_mul(self):
         b=3*7
