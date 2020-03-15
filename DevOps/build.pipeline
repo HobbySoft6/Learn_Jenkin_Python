@@ -81,8 +81,19 @@ pipeline{
         }
 
         stage('unit test'){
-            steps{            
-                echo "will add code here"
+            steps{    
+                script{
+                    virtualenv -p python3.6 venv --clear
+                    . venv/bin/activate
+                    python -m pip install pytest coverage --target=venv/lib/python3.6/site-packages/
+
+                    python -u mySimplePyTest.py
+
+                    deactivate
+
+
+                }        
+                
             }
         }
         
