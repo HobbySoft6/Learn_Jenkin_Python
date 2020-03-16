@@ -1,10 +1,10 @@
 import time
-import glob
+#import glob
 import json
 import unittest
-import pandas as pd
+#import pandas as pd
 import os
-import xml.etree.ElementTree as ET
+#import xml.etree.ElementTree as ET
 #from extract_lexicons import extract_lexicons_fun
 #from generate_skos import generate_skos_fun
 #from Tests.Integration.extract_skosfile import skos_extraction_fun
