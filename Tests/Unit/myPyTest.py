@@ -16,6 +16,6 @@ if __name__ == '__main__':
     anotherDir = "--junitxml={0}".format(os.path.join(working_dir, 'reports', "xunit-result-{0}.xml".format(moduleName)))
     print(anotherDir)
     testDir = [firstDir, anotherDir]
-    #print(testDir)
+    print(testDir)
    
     #pytest.main(testDir)
