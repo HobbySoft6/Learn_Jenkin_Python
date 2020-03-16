@@ -83,10 +83,9 @@ pipeline{
         stage('unit test'){
             steps{ 
                 script{   
-                 virtualenv -p python3.6 venv --clear
-                    . venv/bin/activate
+                 
                     python mySimplePyTest.py
-                    deactivate
+                   
                 
                 }
                 }        
