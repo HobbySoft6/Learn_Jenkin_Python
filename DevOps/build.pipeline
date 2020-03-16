@@ -89,7 +89,7 @@ pipeline{
                    dir("${WORKSPACE}/Tests/Unit"){
                     sh "pwd"
 
-                   python mySimplePyTest.py
+                   
                    }
                 
                 }
