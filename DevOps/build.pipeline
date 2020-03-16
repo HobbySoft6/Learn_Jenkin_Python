@@ -85,7 +85,8 @@ pipeline{
                 script{   
                  
                    print('good, unit test')
-                   python mySimplePyTest.py
+                   echo "my current directory: ${WORKSPACE}"
+                   //python mySimplePyTest.py
                    
                 
                 }
