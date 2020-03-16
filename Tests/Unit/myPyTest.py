@@ -18,4 +18,4 @@ if __name__ == '__main__':
     testDir = [firstDir, anotherDir]
     print(testDir)
    
-    #pytest.main(testDir)
+    pytest.main(testDir)
