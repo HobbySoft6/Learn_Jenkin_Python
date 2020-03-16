@@ -82,7 +82,7 @@ pipeline{
 
         stage('unit test'){
             steps{    
-                script{
+                bat'''
                     virtualenv  venv --distribute
                     . venv/bin/activate
                     python -m pip install pytest coverage --target=venv/lib/python3.6/site-packages/
@@ -90,7 +90,7 @@ pipeline{
                     python -u mySimplePyTest.py
 
                     deactivate
-
+                  '''
 
                 }        
                 
