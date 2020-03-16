@@ -10,14 +10,14 @@ import os
 #from Tests.Integration.extract_skosfile import skos_extraction_fun
 
 
-import json
-import os
-import sys
-import pytest
-import subprocess
+#import json
+#import os
+#import sys
+#import pytest
+#import subprocess
 #import coverage
-import site
-import re
+#import site
+#import re
 
 class TestExtractSkosExport(unittest.TestCase):
     def test_add(self):
