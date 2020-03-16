@@ -89,14 +89,11 @@ pipeline{
                    echo "my current directory: ${WORKSPACE}"
                    dir("${WORKSPACE}/Tests/Unit"){
                        echo "my current directory again: ${WORKSPACE}"
-                    //python mySimplePyTest.py
                     def a=pwd()                     
                     echo "${a}"
-                    bat "dir"
-                    //bat "python --version"
-                    //bat "java -version"
-                   //bat "pytest --version"
                    bat "python mySimplePyTest.py"
+                   bat "pytest --version"
+
 
 
                    }
