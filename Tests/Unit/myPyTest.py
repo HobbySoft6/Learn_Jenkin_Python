@@ -10,7 +10,7 @@ if __name__ == '__main__':
     working_dir = os.getcwd()
     print(working_dir)
     moduleName = os.path.split(working_dir)
-    print("after split:  " 
+    print("after split:  " )
     print(moduleName)
     #moduleName = os.path.split(working_dir)[-1]
     #print(moduleName)
