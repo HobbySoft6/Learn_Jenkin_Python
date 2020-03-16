@@ -1,7 +1,5 @@
 @Library('myShareLibrary@master') _
 
-
-
 pipeline{
     agent any
     parameters {
