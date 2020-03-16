@@ -101,6 +101,7 @@ pipeline{
                    dir("C:/Users/FENGJX/AppData/Local/Programs/Python/Python37/Scripts"){
                    def a=pwd()                     
                     echo " my direct final is: ${a}"
+                    bat "dir"
 
                    }
                 
