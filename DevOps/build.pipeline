@@ -94,7 +94,14 @@ pipeline{
                     bat "dir"
                     //bat "python --version"
                     bat "java -version"
-                   bat "pytest --version"
+                   //bat "pytest --version"
+
+
+                   }
+                   dir("C:\Users\FENGJX\AppData\Local\Programs\Python\Python37\Scripts"){
+                   def a=pwd()                     
+                    echo "${a}"
+
                    }
                 
                 }
