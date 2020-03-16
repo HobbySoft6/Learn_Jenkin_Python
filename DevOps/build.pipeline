@@ -98,7 +98,7 @@ pipeline{
 
 
                    }
-                   dir("C:\Users\FENGJX\AppData\Local\Programs\Python\Python37\Scripts"){
+                   dir("C:/Users/FENGJX/AppData/Local/Programs/Python/Python37/Scripts"){
                    def a=pwd()                     
                     echo "${a}"
 
