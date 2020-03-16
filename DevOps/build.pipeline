@@ -84,7 +84,8 @@ pipeline{
             steps{ 
                 script{   
                  
-                   print('good')
+                   print('good, unit test')
+                   python mySimplePyTest.py
                    
                 
                 }
