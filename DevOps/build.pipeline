@@ -51,7 +51,7 @@ pipeline{
                     sleep(1)
                     def a=pwd()                     
                     echo "${a}"
-                    bat 'python --version'
+                    
                        }
                 
             }
@@ -94,8 +94,9 @@ pipeline{
                     echo "${a}"
                     bat "dir"
                     //bat "python --version"
-                    bat "java -version"
+                    //bat "java -version"
                    //bat "pytest --version"
+                   
 
 
                    }
