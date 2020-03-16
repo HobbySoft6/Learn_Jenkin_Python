@@ -9,11 +9,13 @@ if __name__ == '__main__':
     
     working_dir = os.getcwd()
     print(working_dir)
-    moduleName = os.path.split(working_dir)[-1]
+    moduleName = os.path.split(working_dir)
     print(moduleName)
-    anotherDir = "--junitxml={0}".format(os.path.join(working_dir, 'reports', "xunit-result-{0}.xml".format(moduleName)))
-    print(anotherDir)
-    testDir = [os.getcwd(), anotherDir]
-    print(testDir)
+    #moduleName = os.path.split(working_dir)[-1]
+    #print(moduleName)
+    #anotherDir = "--junitxml={0}".format(os.path.join(working_dir, 'reports', "xunit-result-{0}.xml".format(moduleName)))
+    #print(anotherDir)
+    #testDir = [os.getcwd(), anotherDir]
+    #print(testDir)
    
     #pytest.main(testDir)
