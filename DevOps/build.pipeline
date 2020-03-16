@@ -94,7 +94,7 @@ pipeline{
                     bat "dir"
                     //bat "python --version"
                     bat "java -version"
-                   
+                   bat "pytest --version"
                    }
                 
                 }
