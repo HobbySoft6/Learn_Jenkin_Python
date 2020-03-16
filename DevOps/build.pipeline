@@ -89,6 +89,8 @@ pipeline{
                    dir("${WORKSPACE}/Tests/Unit"){
                        echo "my current directory again: ${WORKSPACE}"
                     //python mySimplePyTest.py
+                    def a=pwd()                     
+                    echo "${a}"
 
                    
                    }
