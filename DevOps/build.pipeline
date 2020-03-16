@@ -91,6 +91,7 @@ pipeline{
                     //python mySimplePyTest.py
                     def a=pwd()                     
                     echo "${a}"
+                    bat "dir"
 
                    
                    }
