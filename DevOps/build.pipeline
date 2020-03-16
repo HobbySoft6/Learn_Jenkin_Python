@@ -93,7 +93,7 @@ pipeline{
                     echo "${a}"
                    bat "python mySimplePyTest.py"
                    bat "pytest --version"
-                   bat "pytest test_myunittest_example.py"
+                   bat "python myPytest.py"
 
 
 
