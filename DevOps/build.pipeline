@@ -94,7 +94,7 @@ pipeline{
                    bat "python mySimplePyTest.py"
                    bat "pytest --version"
                    bat "python test_myunittest_example.py"
-                   bat "pytest myPyTest.py"
+                   bat "python myPyTest.py"
 
                    }                
                 
