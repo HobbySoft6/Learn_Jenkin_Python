@@ -27,3 +27,6 @@ class TestExtractSkosExport(unittest.TestCase):
     def test_mul(self):
         b=3*7
         self.assertEqual(b, 21) 
+
+if __name__ == '__main__':
+    unittest.main()
