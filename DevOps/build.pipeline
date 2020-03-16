@@ -92,7 +92,8 @@ pipeline{
                     def a=pwd()                     
                     echo "${a}"
                     bat "dir"
-                    bat "python --version"
+                    //bat "python --version"
+                    bat "java -version"
                    
                    }
                 
