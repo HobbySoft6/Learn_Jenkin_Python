@@ -86,6 +86,9 @@ pipeline{
                  
                    print('good, unit test')
                    echo "my current directory: ${WORKSPACE}"
+                   dir("${WORKSPACE}/Tests/Unit"){
+                    sh "pwd"
+}
                    //python mySimplePyTest.py
                    
                 
