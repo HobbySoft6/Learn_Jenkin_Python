@@ -16,7 +16,8 @@ pipeline{
                     bat 'echo "hi, try bat and echo"'
                     echo "hi, this is deploy"
                     bat 'dir'
-                    bat 'echo "this is b1 on deploy"'
+                    bat 'echo "this is b1 on deployment"'
+
                 }
 
             }
