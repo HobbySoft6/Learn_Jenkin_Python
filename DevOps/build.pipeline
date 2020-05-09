@@ -27,7 +27,7 @@ pipeline{
                 bat 'set' 
                 bat 'echo "followings are my own define env"'
                 bat 'echo "my define variable one is ${env.envOnBuild2}"'
-                bat 'echo "this is b1"'
+                bat 'echo "this is b1 on build"'
 
             script{
                 echo "${env.envOnBuild1}"
