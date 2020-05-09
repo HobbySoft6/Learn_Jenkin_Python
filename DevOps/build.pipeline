@@ -108,7 +108,7 @@ pipeline{
     post {
         success {
             script {                              
-                build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/master',                
+                build job: 'learn_pipeline_python/Learn_Pipeline_Python_Deploy/b1',                
                     parameters: [
                         string(name: 'PERSON', value:params.PERSON),
 
