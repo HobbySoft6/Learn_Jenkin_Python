@@ -21,6 +21,17 @@ pipeline{
     }
 
     stages{
+        stage('learn groovy'){
+            steps{                         
+                
+            script{
+                def employee = ['name':'john', 'age':26, 'phone':123123123]
+                println employee
+                
+            }    
+                             
+            }
+        }
 
         stage('env test'){
             steps{                            
@@ -37,6 +48,8 @@ pipeline{
                              
             }
         }
+
+        
 
         stage('build test'){
             steps{  
