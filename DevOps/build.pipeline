@@ -28,6 +28,18 @@ pipeline{
             script{
                 def employee = ['name':'john', 'age':26, 'phone':123123123]
                 println employee
+                println employee.age
+                println employee['phone']
+                println emplyee.get('name')
+                println employee.size()
+                employee.put('add', '118 rapport')
+                println employee
+                println employee.containsKey('name')
+                println employee.containsValue('ddd')
+                def employee1 = employee.clone()
+                println employee1
+                
+
                 
             }    
                              
