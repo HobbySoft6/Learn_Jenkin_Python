@@ -22,7 +22,8 @@ pipeline{
 
     stages{
         stage('learn groovy'){
-            steps{                         
+            steps{  
+                bat 'echo "start groovy"'                       
                 
             script{
                 def employee = ['name':'john', 'age':26, 'phone':123123123]
